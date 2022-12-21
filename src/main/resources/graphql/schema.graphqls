@@ -1,0 +1,54 @@
+type LateralMenu {
+    id:ID!,
+    name:String,
+    url:String,
+    topMenuId: [TopMenu],
+    number: Int,
+    createdDate:String,
+    createdBy:ID!,
+    lastModifiedDate:String,
+    lastModifiedBy: ID!,
+    deletedDate:String,
+    deletedBy:String,
+    isDelete:Boolean
+}
+
+type MainMenu {
+    id: ID!,
+    name: String,
+    ruleId:ID!,
+    createdDate:String,
+    createdBy:ID!,
+    lastModifiedDate:String,
+    lastModifiedBy: ID!,
+    deletedDate:String,
+    deletedBy:String,
+    isDelete:Boolean
+
+}
+
+type TopMenu{
+    id: ID!,
+    name: String,
+    url:String,
+    mainMenuId:[MainMenu],
+    number: Int,
+    createdDate:String,
+    createdBy:ID!,
+    lastModifiedDate:String,
+    lastModifiedBy: ID!,
+    deletedDate:String,
+    deletedBy:String,
+    isDelete:Boolean
+
+
+}
+type Query {
+    allMainMenu:[MainMenu],
+    oneMainMenu(id:ID):[MainMenu],
+    allLateralMenu:[LateralMenu],
+    oneLateralMenu(id:ID):[LateralMenu],
+    allTopMenu:[TopMenu],
+    oneTopMenu(id:ID):[TopMenu]
+}
+

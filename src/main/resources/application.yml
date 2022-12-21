@@ -1,0 +1,28 @@
+
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    url: jdbc:postgresql://localhost:15433/mainmenuservice
+    password: postgres
+  application:
+    name: 'mainmenuservice'
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  graphql:
+    graphiql:
+      enabled: true
+
+server:
+  port: '8083'
+
+
+logging:
+  level:
+    root: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.security.oauth2: DEBUG
