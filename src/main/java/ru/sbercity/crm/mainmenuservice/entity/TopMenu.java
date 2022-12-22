@@ -25,7 +25,7 @@ public class TopMenu extends IdEntity implements Serializable {
     @Column(name = "url")
     private String url;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "main_menu_id")
     private MainMenu mainMenuId;
 

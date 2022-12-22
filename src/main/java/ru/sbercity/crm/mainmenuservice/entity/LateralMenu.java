@@ -9,6 +9,7 @@ import javax.persistence.*;
 import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -25,7 +26,7 @@ public class LateralMenu extends IdEntity implements Serializable {
     @Column(name = "url")
     private String url;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "top_menu_id")
     private TopMenu topMenuId;
 
